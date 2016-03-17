@@ -1,0 +1,50 @@
+﻿<Window x:Class="Tenta20151218.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tenta20151218"
+        mc:Ignorable="d"
+        Title="Great Tic Tac Toe Adventures" Height="500" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <!--Declaring the grid rows and columns. There are three columns and four rows-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--Toolbar for the menu. It has to buttons: 1 for starting a new game and 1 for exiting the app-->
+        <ToolBar DockPanel.Dock="Top" Grid.Row="0" Grid.ColumnSpan="3">
+            <Menu>
+                <StackPanel Orientation="Vertical">
+                    <MenuItem Header="Start a new Game" Name="StartGameButton" Click="StartGameButton_Click" ></MenuItem>
+                    <MenuItem Header="Exit Game" Name="EndGameButton" Click="EndGameButton_Click"></MenuItem>
+                </StackPanel>
+            </Menu>
+            <StackPanel Grid.Row="0" Grid.Column="1">
+                <Label>Hello and Welcome to Tic Tac Toe!</Label>
+                <Label Name="PlayersTurnLabel">Time to play a game</Label>
+                <Label Name="ExtraInfo"></Label>
+            </StackPanel>
+        </ToolBar>
+        
+        <!--The Game Buttons! The buttons are ordered in the rows and columns-->
+        <Button Name="FirstButton" Grid.Row="1" Grid.Column="0" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="SecondButton" Grid.Row="1" Grid.Column="1" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="ThirdButton" Grid.Row="1" Grid.Column="2" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="FourthButton" Grid.Row="2" Grid.Column="0" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="FifthButton" Grid.Row="2" Grid.Column="1" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="SixthButton" Grid.Row="2" Grid.Column="2" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="SeventhButton" Grid.Row="3" Grid.Column="0" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="EigthButton" Grid.Row="3" Grid.Column="1" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        <Button Name="NinthButton" Grid.Row="3" Grid.Column="2" Click="GameButton_OnClick" Style="{StaticResource FredrikStyle}"/>
+        
+    </Grid>
+</Window>
